@@ -20,16 +20,17 @@ class UserSeeder extends Seeder
             'name' => 'Academy One',
         ]);
 
-        $superAdminRole = Role::firstOrCreate(['name' => 'Super Admin']);
-        $adminTeacherRole = Role::firstOrCreate(['name' => 'Admin Teacher']);
+//        $superAdminRole = Role::firstOrCreate(['name' => 'Super Admin']);
+        $adminRole = Role::firstOrCreate(['name' => 'Admin']);
         $studentRole = Role::firstOrCreate(['name' => 'Student']);
+        $teacherRole = Role::firstOrCreate(['name' => 'Teacher']);
 
         // Seed Super Admin user
         User::create([
             'name' => 'Super Admin',
             'email' => 'superadmin@example.com',
             'password' => Hash::make('password'),
-            'role_id' => $superAdminRole->id,
+            'is_super_admin' => 1,
             'tenant_id' => null,
         ]);
 
@@ -38,7 +39,7 @@ class UserSeeder extends Seeder
             'name' => 'Admin Teacher',
             'email' => 'adminteacher@academyone.com',
             'password' => Hash::make('password'),
-            'role_id' => $adminTeacherRole->id,
+            'role_id' => $teacherRole->id,
             'tenant_id' => $tenant->id,
         ]);
 
