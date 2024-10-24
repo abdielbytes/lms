@@ -7,7 +7,6 @@
     @vite(['resources/css/admin-dash.css', 'resources/js/app.js'])
 </head>
 <body>
-<div class="full-page-screen">
 
     <div class="navigation-bar">
         <div class="burger-menu">&#9776;</div>
@@ -34,7 +33,10 @@
                 </ul>
             </div>
         </div>
-    </div>
+
+        <div>
+            <img src="re"
+        </div>
     </div>
 
 
