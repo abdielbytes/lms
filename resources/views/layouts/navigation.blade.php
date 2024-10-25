@@ -35,7 +35,7 @@
         </div>
 
         <div>
-            <img src="re"
+            <img src="{{url('storage/images/profile-pictures/user.png')}}">
         </div>
     </div>
 
